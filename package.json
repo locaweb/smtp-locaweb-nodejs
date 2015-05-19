@@ -14,5 +14,8 @@
     "transacional"
   ],
   "author": "Kemel Zaidan <kemel.zaidan@locaweb.com.br>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.55.0"
+  }
 }
