@@ -1,7 +1,5 @@
-var http = require('http');
+// var http = require('http');
 var request = require('request');
-
-var endpoint = 'https://api.smtplw.com.br/v1/messages';
 
 var email = new function(param) {
     param = param || {};
