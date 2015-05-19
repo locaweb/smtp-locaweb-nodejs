@@ -1,0 +1,18 @@
+{
+  "name": "smtp-locaweb-nodejs",
+  "version": "1.0.0",
+  "description": "Biblioteca oficial para fazer uso do serviço de email transacional da Locaweb com NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "email",
+    "smtp",
+    "api",
+    "locaweb",
+    "transacional"
+  ],
+  "author": "Kemel Zaidan <kemel.zaidan@locaweb.com.br>",
+  "license": "ISC"
+}
