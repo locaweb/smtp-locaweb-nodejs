@@ -1,6 +1,16 @@
 var request = require('request');
 var email = require('email.js');
 
-var endpoint = 'https://api.smtplw.com.br/v1/messages';
+var options = {
+    endpoint: 'https://api.smtplw.com.br/v1/messages',
+    headers: {
+        'x-auth-token': ''
+    }
 
-request.post(endpoint).form(email_object);
+var sendMail = function(emailObject){
+    request.post({url:endpoint, form:emailObject}, function(err, httpResponse, body){
+        if (err) { return console.error(err);}
+        console.log("HTTP Code: " + httpResponse);
+        console.log("Response body: " + body);
+    }
+}
