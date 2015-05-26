@@ -1,0 +1,5 @@
+// coloque o token da sua conta SMTP Locaweb na variável abaixo
+// você pode ter acesso ao seu token no painel do produto em https://smtplw.com.br/panel/settings/api
+var token = 'o_token_da_sua_conta';
+
+module.exports = token;
