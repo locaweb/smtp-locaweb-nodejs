@@ -21,15 +21,15 @@ method.addFrom = function (from) {
 };
 
 method.addTo = function (to) {
-    this.to = to;
+    this.to.push(to);
 };
 
 method.addCc = function (cc) {
-    this.cc = cc;
+    this.cc.push(cc);
 };
 
 method.addBcc = function (bcc) {
-    this.bcc = bcc;
+    this.bcc.push(bcc);
 };
 
 method.addBody = function (body) {

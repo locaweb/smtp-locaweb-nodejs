@@ -4,7 +4,7 @@
   "description": "Biblioteca para fazer uso da API do serviço de email transacional da Locaweb com NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "mocha && mocha test --require blanket --reporter html-cov > test/coverage.html"
+    "test": "mocha; mocha test --require blanket --reporter html-cov > test/coverage.html"
   },
   "keywords": [
     "email",

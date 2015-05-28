@@ -1,7 +1,6 @@
 // 3rd party test libs
 var chai = require('chai');
 var expect = require('chai').expect;
-var blanket = require('blanket');
 
 // locaweb lib files
 var Email = require('../email.js');
