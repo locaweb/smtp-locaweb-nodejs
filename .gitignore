@@ -1,10 +1,5 @@
 node_modules/
 npm-debug.log
 .DS_Store
-test/config.js
-.env.test
-.env.development
-.env.production
-.env.staging
-.env
+test/coverage.html
 token.js

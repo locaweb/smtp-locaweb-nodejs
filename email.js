@@ -1,5 +1,4 @@
 'use strict';
-var method = Email.prototype;
 
 function Email (param) {
     param = param || {};
@@ -9,9 +8,9 @@ function Email (param) {
     this.cc         = param.cc      || [];
     this.bcc        = param.bcc     || [];
     this.body       = param.body    || '';
-    this.headers    = param.headers || {};
-    this.apiToken   = param.token   || '';
 }
+
+var method = Email.prototype;
 
 method.addSubject = function (subject) {
     this.subject = subject;
@@ -36,10 +35,5 @@ method.addBcc = function (bcc) {
 method.addBody = function (body) {
     this.body = body;
 };
-
-//method.addToken = function(token){
-//    this.apiToken = token;
-//    this.headers.x-auth-token = this.token;
-//}
 
 module.exports = Email;
