@@ -6,20 +6,53 @@ var expect = require('chai').expect;
 var Email = require('../email.js');
 var sendMail = require('../index.js');
 
+var email = new Email();
+
 describe('Email', function() {
+
     
+    it('checa se email é uma instância da classe Email', function() {
+        expect(email).to.be.instanceof(Email);
+    });
+        
     it('checa se os atributos do Email são tipos válidos', function() {
         expect(email.subject).to.be.a('string');
         expect(email.from).to.be.a('string');
         expect(email.body).to.be.a('string');
-        expect(email.to).to.be.instanceof('array');
-        expect(email.cc).to.be.instanceof('array');
-        expect(email.bcc).to.be.instanceof('array');
+        expect(email.to).to.be.an('array');
+        expect(email.cc).to.be.an('array');
+        expect(email.bcc).to.be.an('array');
     });
     
-    it('checa se email é uma instância da classe Email', function() {
-        var email = new Email();
-        expect(email).to.be.instanceof(Email);
-    })
+    it('checa o método .addSubject', function() {
+        email.addSubject('Título da mensagem');
+        expect(email.subject).to.equal('Título da mensagem');
+    });
+    
+    it('checa o método .addTo', function() {
+        email.addTo('someaddress@provider.com');
+        expect(email.to).to.contain('someaddress@provider.com');
+    });
+    
+    it('checa o método .addFrom', function() {
+        email.addFrom('sender@provider.com');
+        expect(email.from).to.equal('sender@provider.com');
+    });
+    
+    it('checa o método .addCc', function() {
+        email.addCc('anothermail@provider.com');
+        expect(email.cc).to.contain('anothermail@provider.com');
+    });
+    
+    it('checa o método .addBcc', function() {
+        email.addBcc('blindcopy@provider.com');
+        expect(email.bcc).to.contain('blindcopy@provider.com');
+    });
+    
+    it('checa o método .addBody', function() {
+        email.addBody('Corpo da mensagem. Pode ter <strong>HTML<\strong> mas \" duplas devem ser espapadas com \.');
+        expect(email.body).to.equal('Corpo da mensagem. Pode ter <strong>HTML<\strong> mas \" duplas devem ser espapadas com \.');
+        expect(email.body.length).to.equal(87);
+    });
 });
 
