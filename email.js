@@ -8,6 +8,7 @@ function Email (param) {
     this.cc         = param.cc      || [];
     this.bcc        = param.bcc     || [];
     this.body       = param.body    || '';
+    this.headers    = param.headers || {};
 }
 
 var method = Email.prototype;
@@ -36,4 +37,11 @@ method.addBody = function (body) {
     this.body = body;
 };
 
+method.addHeaders = function (headers) {
+    if (typeof(headers) != 'object') {
+        throw new Error('O header deve ser um objeto'); 
+    } else {
+        this.headers = headers;
+    }
+}
 module.exports = Email;
