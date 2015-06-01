@@ -4,12 +4,10 @@ var expect = require('chai').expect;
 
 // locaweb lib files
 var Email = require('../email.js');
-var sendMail = require('../index.js');
 
 var email = new Email();
 
 describe('Email', function() {
-
     
     it('checa se email é uma instância da classe Email', function() {
         expect(email).to.be.instanceof(Email);
@@ -50,9 +48,14 @@ describe('Email', function() {
     });
     
     it('checa o método .addBody', function() {
-        email.addBody('Corpo da mensagem. Pode ter <strong>HTML<\strong> mas \" duplas devem ser espapadas com \.');
-        expect(email.body).to.equal('Corpo da mensagem. Pode ter <strong>HTML<\strong> mas \" duplas devem ser espapadas com \.');
+        email.addBody('Corpo da mensagem. Pode ter <strong>HTML<\strong> mas \" duplas devem ser escapadas com \.');
+        expect(email.body).to.equal('Corpo da mensagem. Pode ter <strong>HTML<\strong> mas \" duplas devem ser escapadas com \.');
         expect(email.body.length).to.equal(87);
     });
+    
+    it('checa o método .addHeaders', function() {
+        email.addHeaders({'Content-Type': 'text/plain'});
+        expect(email.headers).to.be.an('object');
+        expect(email.headers['Content-Type']).to.equal('text/plain');
+    })
 });
-
