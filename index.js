@@ -43,7 +43,7 @@ module.exports = function (emailObject){
         if (err) { return console.error(err); }
         console.log('MENSAGEM ENVIADA PARA A API...');
         console.log ('HTTP Code: ' + httpResponse.statusCode);
-        console.log ('Response body: ', body);
+//        console.log ('Response body: ', body); //debug only
         
         if (httpResponse.statusCode === 201) {
             console.log('Location: ' + httpResponse.headers.location);
