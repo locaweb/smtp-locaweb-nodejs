@@ -16,6 +16,7 @@
   "author": "Kemel Zaidan <kemel.zaidan@locaweb.com.br>",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^1.1.0",
     "request": "^2.55.0"
   },
   "devDependencies": {

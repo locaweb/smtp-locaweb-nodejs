@@ -1,6 +1,0 @@
-/* faça uma cópia deste arquivo e renomeie ele para token.js
-   em seguida, substitua o valor da variável abaixo pelo seu token de acesso à API da sua conta SMTP Locaweb.
-   você pode visualizar seu token acessando o painel do produto em https://smtplw.com.br/panel/settings/api */
-var token = 'o_token_da_sua_conta';
-
-module.exports = token;
