@@ -21,12 +21,20 @@
   "devDependencies": {
     "blanket": "^1.1.7",
     "chai": "^2.3.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0"
   },
   "config": {
     "blanket": {
-      "pattern": [ "index.js", "email.js" ],
-      "data-cover-never": [ "node_modules", "token.js"]
+      "pattern": [
+        "index.js",
+        "email.js"
+      ],
+      "data-cover-never": [
+        "node_modules",
+        "token.js"
+      ]
     }
   },
   "repository": {
