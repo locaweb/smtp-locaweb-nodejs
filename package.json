@@ -1,7 +1,7 @@
 {
   "name": "smtp-locaweb-nodejs",
   "version": "1.0.0",
-  "description": "NPM library to make usage of Locaweb transactional email service API",
+  "description": "NPM library to make usage of Locaweb transactional email service API with NodeJS",
   "homepage": "http://www.locaweb.com.br/produtos/smtp-locaweb.html",
   "main": "index.js",
   "scripts": {
