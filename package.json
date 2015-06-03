@@ -16,8 +16,8 @@
   ],
   "author": "Kemel Zaidan <kemel.zaidan@locaweb.com.br>",
   "contributors": [
-      "Eron Junior <eron.junior@locaweb.com.br>
-  ]
+      "Eron Junior <eron.junior@locaweb.com.br>"
+  ],
   "license": "MIT",
   "dependencies": {
     "dotenv": "^1.1.0",
