@@ -1,4 +1,4 @@
-# Locaweb SMTP NodeJS
+# SMTP Locaweb NodeJS
 
 Leia a versão em português no [README.pt-br.md](https://github.com/locaweb/locaweb-smtp-nodejs/blob/master/README.pt-br.md).
 
@@ -11,7 +11,7 @@ This is a NPM library to make usage of [Locaweb transactional email service](htt
 Install it as usual, with NPM package manager by typing:
 
 ```shell
-npm i locaweb-smtp-nodejs
+npm i smtp-locaweb-nodejs
 ```
 
 After that, you must create a `.env` file on the root folder of your application with your account's API token, just like show below:
@@ -27,7 +27,7 @@ No spaces are allowed. The token can be found by accessing the product's [dashbo
 Later, just require the package on your application:
 
 ```js
-var locaweb = require('locaweb-smtp-nodejs');
+var locaweb = require('smtp-locaweb-nodejs');
 ```
 
 You can create a new email object involking the Email constructor and using the following methods to populate it:

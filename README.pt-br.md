@@ -1,4 +1,4 @@
-# Locaweb SMTP NodeJS
+# SMTP Locaweb NodeJS
 
 Trata-se de uma bibliotec NPM para fazer uso da API de envio do [serviço de email transacional da Locaweb](http://www.locaweb.com.br/produtos/smtp-locaweb.html) com NodeJS.
 
@@ -9,7 +9,7 @@ Trata-se de uma bibliotec NPM para fazer uso da API de envio do [serviço de ema
 Instale normalmente, através do NPM digitando:
 
 ```shell
-npm i locaweb-smtp-nodejs
+npm i smtp-locaweb-nodejs
 ```
 
 Depois disso, é preciso criar um arquivo `.env` na pasta raiz da sua aplicação contendo seu token de uso da API, conforme mostrado abaixo:
@@ -25,7 +25,7 @@ Não são permitidos espaços. O token pode ser encontrado acessando o [painel](
 Em seguida, faça o "import" do pacote em sua aplicação:
 
 ```js
-var locaweb = require('locaweb-smtp-nodejs');
+var locaweb = require('smtp-locaweb-nodejs');
 ```
 
 Você pode criar um novo objeto email ao invocar o construtor Email e usar os seguintes métodos para adicionar os atributos:
