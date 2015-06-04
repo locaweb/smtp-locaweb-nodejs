@@ -1,7 +1,8 @@
+require ('dotenv').load();
 var request = require ('request');
 var Email = require ('./email.js');
-require ('dotenv').load();
 
+// request options
 var options = {
         headers: {
             'x-auth-token': process.env.TOKEN,
@@ -12,6 +13,7 @@ var options = {
         json: true
 };
 
+// private function to warn about limits
 function checkLimits (email){
     if (email.subject.length > 998) {
         console.warn ('WARNING: título das mensagens não superar 998 caracteres. API vai rejeitar a sua mensagem');
@@ -30,7 +32,9 @@ function checkLimits (email){
     }
 }
 
-module.exports = function (emailObject){
+var exports = module.exports = {};
+
+exports.sendMail = function (emailObject){
     checkLimits (emailObject);
     
     //compose email
@@ -51,3 +55,5 @@ module.exports = function (emailObject){
         }
     });
 };
+
+exports.Email = Email;

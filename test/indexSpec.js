@@ -8,8 +8,7 @@ chai.should();
 chai.use(sinonChai);
 
 // locaweb lib files
-var Email = require('../email.js');
-var sendMail = require('../index.js');
+var locaweb = require('../index.js');
 
 
 var mensagem = {
@@ -20,10 +19,10 @@ var mensagem = {
 }
 
 
-describe('sendMail', function() {
+describe('sendMail function', function() {
     
-    var spy = sinon.spy(sendMail);
-    var email = new Email(mensagem);
+    var spy = sinon.spy(locaweb.sendMail);
+    var email = new locaweb.Email(mensagem);
     var response = [201,
                     { 'Location': 'https://api.smtplw.com.br/v1/messages/xx',
                      'Content-Type': 'application/json' },

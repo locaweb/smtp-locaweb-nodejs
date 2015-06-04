@@ -3,14 +3,14 @@ var chai = require('chai');
 var expect = require('chai').expect;
 
 // locaweb lib files
-var Email = require('../email.js');
+var locaweb = require('../index.js');
 
-var email = new Email();
+var email = new locaweb.Email();
 
-describe('Email', function() {
+describe('Email object', function() {
     
     it('checa se email é uma instância da classe Email', function() {
-        expect(email).to.be.instanceof(Email);
+        expect(email).to.be.instanceof(locaweb.Email);
     });
         
     it('checa se os atributos do Email são tipos válidos', function() {
