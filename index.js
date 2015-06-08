@@ -1,9 +1,10 @@
 require ('dotenv').load();
-var request = require ('request');
-var Email = require ('./email.js');
-
-// request options
-var options = {
+// imports
+var request = require ('request'),
+    Email = require ('./email.js'),
+    
+    // request options variable
+    options = {
         headers: {
             'x-auth-token': process.env.TOKEN,
             'User-Agent': 'locaweb-smtp-nodejs'
@@ -11,7 +12,8 @@ var options = {
         rejectUnauthorized: false,
         url: 'https://api.smtplw.com.br/v1/messages',
         json: true
-};
+    },
+    exports = module.exports = {};
 
 // private function to warn about limits
 function checkLimits (email){
@@ -31,8 +33,6 @@ function checkLimits (email){
         console.warn ('WARNING: não é possível exceder 50 headers');
     }
 }
-
-var exports = module.exports = {};
 
 exports.sendMail = function (emailObject){
     checkLimits (emailObject);
