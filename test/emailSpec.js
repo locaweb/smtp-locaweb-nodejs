@@ -57,7 +57,7 @@ describe('Email object', function() {
         email.addHeaders({'Content-Type': 'text/plain'});
         expect(email.headers).to.be.an('object');
         expect(email.headers['Content-Type']).to.equal('text/plain');
-    })
+    });
     
     it('checa se o método .addHeaders dá erro com argunto errado', function() {
         var errorMessage = new ReferenceError('O header deve ser um objeto');
