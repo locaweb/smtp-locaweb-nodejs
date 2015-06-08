@@ -38,7 +38,7 @@ method.addBody = function (body) {
 };
 
 method.addHeaders = function (headers) {
-    if (typeof(headers) != 'object') {
+    if (typeof(headers) !== 'object') {
         throw new Error('O header deve ser um objeto'); 
     } else {
         this.headers = headers;

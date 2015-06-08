@@ -1,11 +1,11 @@
 // 3rd party test libs
-var chai = require('chai');
-var expect = require('chai').expect;
+var chai = require('chai'),
+    expect = require('chai').expect,
 
 // locaweb lib files
-var locaweb = require('../index.js');
+    locaweb = require('../index.js'),
 
-var email = new locaweb.Email();
+    email = new locaweb.Email();
 
 describe('Email object', function() {
     
@@ -57,5 +57,13 @@ describe('Email object', function() {
         email.addHeaders({'Content-Type': 'text/plain'});
         expect(email.headers).to.be.an('object');
         expect(email.headers['Content-Type']).to.equal('text/plain');
+    })
+    
+    it('checa se o método .addHeaders dá erro com argunto errado', function() {
+        var errorMessage = new ReferenceError('O header deve ser um objeto');
+                
+        expect(function () {
+            email.addHeaders('Content-Type: text/plain')
+        }).to.throw(Error, errorMessage);
     })
 });
