@@ -1,6 +1,6 @@
 {
   "name": "smtp-locaweb-nodejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NPM library to make usage of Locaweb transactional email service API with NodeJS",
   "homepage": "http://www.locaweb.com.br/produtos/smtp-locaweb.html",
   "main": "index.js",
@@ -16,7 +16,7 @@
   ],
   "author": "Kemel Zaidan <kemel.zaidan@locaweb.com.br>",
   "contributors": [
-      "Eron Junior <eron.junior@locaweb.com.br>"
+    "Eron Junior <eron.junior@locaweb.com.br>"
   ],
   "license": "MIT",
   "dependencies": {
