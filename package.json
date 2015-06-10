@@ -44,6 +44,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/locaweb/locaweb-smtp-nodejs.git"
+    "url": "https://github.com/locaweb/smtp-locaweb-nodejs.git"
   }
 }
