@@ -1,6 +1,6 @@
 # SMTP Locaweb NodeJS
 
-Leia a versão em português no [README.pt-br.md](https://github.com/locaweb/locaweb-smtp-nodejs/blob/master/README.pt-br.md).
+Leia a versão em português no [README.pt-br.md](README.pt-br.md).
 
 This is a NPM library to make usage of [Locaweb transactional email service](http://www.locaweb.com.br/produtos/smtp-locaweb.html) API with NodeJS.
 
