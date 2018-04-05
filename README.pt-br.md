@@ -1,6 +1,6 @@
 # SMTP Locaweb NodeJS
 
-Trata-se de uma bibliotec NPM para fazer uso da API de envio do [serviço de email transacional da Locaweb](http://www.locaweb.com.br/produtos/smtp-locaweb.html) com NodeJS.
+Trata-se de uma biblioteca NPM para fazer uso da API de envio do [serviço de email transacional da Locaweb](http://www.locaweb.com.br/produtos/smtp-locaweb.html) com NodeJS.
 
 **ATENÇÃO:** se você deseja enviar os seus emails utilizando o protocolo SMTP, ao invés da API REST, use uma biblioteca SMTP como o [Nodemailer](http://www.nodemailer.com), para enviar suas mensagens.
 
